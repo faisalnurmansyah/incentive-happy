@@ -1,0 +1,145 @@
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+
+  @-moz-keyframes #{$animation-name}
+    @content
+
+  @-ms-keyframes #{$animation-name}
+    @content
+
+  @-o-keyframes #{$animation-name}
+    @content
+
+  @keyframes #{$animation-name}
+    @content
+
+=animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}
+
+=transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+=opacity($opacity)
+  opacity: $opacity
+  $opacity-ie: $opacity * 100
+  filter: alpha(opacity = $opacity-ie)
+
+=transform($translate3d)
+  transform: $translate3d
+  -webkit-transform: $translate3d
+  -moz-transform: $translate3d
+  -o-transform: $translate3d
+  -ms-transform: $translate3d
+
+=background($path,$size: auto,$position:0 0,$repeat: no-repeat)
+  background: transparent url(#{$path}) $repeat $position
+  background-size: $size
+  -webkit-background-size: $size
+  -moz-background-size: $size
+=backgroundSize($val)
+  background-size: $val
+  -webkit-background-size: $val
+  -moz-background-size: $val
+=filter($value)
+  -webkit-filter : $value
+  filter: $value
+=center()
+  align-items: center
+  display: flex
+  display: -webkit-flex
+  -webkit-align-items: center
+  -webkit-box-align: center
+  -webkit-box-pack: center
+  box-align: center
+
+=responsive($max:0,$min: 0)
+  @if $min == 0
+    @media(max-width: $max)
+      @content
+  @else if $max == 0
+    @media(min-width: $min)
+      @content
+  @else
+    @media(max-width: $max) and  (min-width: $min)
+      @content
+=mobile()
+  +responsive(767px)
+    @content
+=maxtablet()
+  +responsive(991px)
+    @content
+=mintablet()
+  +responsive(0,768px)
+    @content
+=minltablet()
+  +responsive(0,992px)
+    @content
+=tablet()
+  +responsive(992px,768px)
+    @content
+=ltablet()
+  +responsive(1200px,992px)
+    @content
+=sdekstop()
+  +responsive(1200px,1024px)
+    @content
+=large()
+  +responsive(0,1200px)
+    @content
+
+//IE8
+
+%clearfix
+  *zoom: 1
+  &:before, &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+%visuallyhidden
+  margin: -1px
+  padding: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  clip: rect(0, 0, 0, 0)
+  position: absolute
+
+=imgBg($padding)
+  +backgroundSize(cover)
+  background-position: center
+  background-color: #eee
+  display: block
+  &:before
+    content: ""
+    display: block
+    padding: $padding
+
+=absfull()
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+=fontGenerator($name,$weight,$family)
+  @for $i from 1 through length($family)
+    $src: #{"../fonts/"}#{nth($family, $i)}
+    @font-face
+      font-family : $name
+      src         : local($name)
+      src         : url("#{$src}.eot")
+      src         : url("#{$src}.svg") format("svg"), url("#{$src}.eot#iefix") format("embedded-opentype"), url("#{$src}.ttf") format("truetype"), url("#{$src}.woff") format("woff")
+      font-style  : normal
+      font-weight : nth($weight, $i)

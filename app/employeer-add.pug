@@ -1,0 +1,119 @@
+extends templates/layout.pug
+
+block vars
+  -var activepage = "employeer"
+
+block content
+  .content-wrap
+    .content-header
+      h1 Employeer
+        .sub-head Add
+    .content-body
+      .section-form
+        .form-main
+          .form-group
+            label Project Name
+            input.form-control(type="text" name="nama_klien" required)
+          .form-group
+            label Project Type
+            select.selectpicker(name="klasifikasi_klien" required)
+              option(selected) Select Project Type
+              option Design UI/UX
+              option Prototype (HTML)
+              option Website Development
+              option Web App
+              option Mobile App
+              option Web App + Mobile App
+          .form-group
+            label Timeline
+            .row
+              .col-sm-4
+                .inp-group.date
+                  label Start Date
+                  input.form-control#tanggal(type="text" name="tanggal" required)
+                  .addon
+                    label.fa.fa-calendar(for="tanggal")
+              .col-sm-4
+                .inp-group.date
+                  label End Date
+                  input.form-control#tanggal(type="text" name="tanggal" required)
+                  .addon
+                    label.fa.fa-calendar(for="tanggal")
+              .col-sm-4
+                .inp-group.date
+                  label Actual Date
+                  input.form-control#tanggal(type="text" name="tanggal" required)
+                  .addon
+                    label.fa.fa-calendar(for="tanggal")
+          .form-group
+            label Incentive Value
+            .inp-group.curren
+              .addon Rp
+              input.form-control.currency(type="text" name="ope_tidak_ditagih" required)
+          .form-group
+            label Team
+            .row
+              .col-sm-6
+                .inp-group
+                  label Name
+                  select.selectpicker(name="klasifikasi_klien" required)
+                    option(selected) Employeer
+                    option Employeer 1
+                    option Employeer 2
+                    option Employeer 3
+                    option Employeer 4
+                    option Employeer 5
+              .col-sm-6
+                .inp-group
+                  label Title
+                  select.selectpicker(name="klasifikasi_klien" required)
+                    option(selected) Backend Developer
+                    option Frontend Designer
+                    option QA/QC
+                    option PM
+          .form-group
+            label &nbsp;
+            .row
+              .col-sm-6
+                .inp-group
+                  label Value %
+                  input.form-control(type="text" name="nama_klien" required)
+              .col-sm-6
+                .inp-group
+                  label Amount
+                  .inp-group.curren
+                    .addon Rp
+                    input.form-control.currency(type="text" name="ope_tidak_ditagih" required)
+          .form-group
+            label Status
+            select.selectpicker(name="klasifikasi_klien" required)
+              option(selected) On progress
+              option On-time
+              option Delayed (- 1 week)
+              option Delayed (- 2 week)
+              option Delayed (- 3 week)
+              option Delayed (- 4 week)
+              option No Incentive (0)
+          .form-group
+            label.pull-left Additional Information
+            //- input.form-control.currency(type="text" name="ope_tidak_ditagih" required)
+            textarea.form-control(type="text" name="nama_klien" required)
+        .form-foot
+          .pull-right
+            btn.btn.btn-default(type="button") Cancel
+            a.btn.btn-green#saveButton(href="#") Save
+
+
+
+block modal
+  #modalDelete.modal.fade(tabindex="-1" role="dialog")
+    .modal-dialog.modal-sm
+      .modal-content
+        .modal-header
+          img.close(src="images/icon-close.png" data-dismiss="modal" aria-label="Close")
+          h4.modal-title Hapus Client
+        .modal-body
+          p Apakah Anda yakin untuk menghapus [nama client]?
+        .modal-footer
+          button.btn.btn-default(type="button" data-dismiss="modal") Cancel
+          button.btn.btn-primary(type="button") Delete

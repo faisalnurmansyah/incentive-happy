@@ -1,0 +1,202 @@
+nav.menu-wrap
+  background-color: #FFF
+  position: fixed
+  z-index: 100
+  height: 100vh
+  top: 0
+  width: 240px
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08)
+  // border-right: 1px solid #DEE4E8
+  padding: 13px 0 30px
+  color: #1F2B34
+  overflow-y: auto
+  +transition(all .3s)
+  &::-webkit-scrollbar 
+    width: 14px
+  &::-webkit-scrollbar-thumb 
+    border: 4px solid rgba(0, 0, 0, 0)
+    background-clip: padding-box
+    -webkit-border-radius: 7px
+    background-color: rgba(79, 93, 186, 0.5)
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05)
+  &::-webkit-scrollbar-corner 
+    background-color: transparent
+  .sidebar-head
+    padding: 0 20px 19px
+    +transition(all .3s)
+    .logo
+      font-size: 20px
+      color: $primary
+      font-weight: 700
+      img
+        width: 30px
+        height: 30px
+        margin-right: 10px
+  .menu-toggle
+    height: 50px
+    width: 5px
+    border-radius: 5px
+    background-color: #C3CDD4
+    position: absolute
+    z-index: 100
+    right: 10px
+    top: calc(50% - 25px)
+    cursor: pointer
+    &:hover
+      background-color: $primary
+  .main-menu
+    padding-left: 0
+    padding: 30px 0
+    &> li
+      line-height: 20px
+      list-style: none
+      padding: 15px 0 15px 20px
+      position: relative
+      &> a
+        color: inherit
+        padding: 0 30px
+        position: relative
+        display: block
+        min-height: 20px
+        white-space: nowrap
+        .svg
+          position: absolute
+          left: 0
+          top: 0
+          max-height: 20px
+          max-width: 20px
+        span
+          float: left
+        .fa
+          float: right
+          font-size: 18px
+          color: $primary
+          padding-right: 10px
+          &.up:before
+            content: "\f106"
+      &:hover,
+      &.active
+        &> a
+          color: $primary
+        .svg path
+          fill: $primary
+        .active-sub
+          color: $primary
+      &:hover
+        // background-color: #d1d8e0
+        &> a
+          // color: #FFF
+      &.active
+        border-left: 3px solid $primary
+        &> a
+          font-weight: 600
+        .sub-menu
+          display: block
+
+    .sub-menu
+      padding: 20px 0 5px 30px
+      display: none
+      &> li
+        line-height: 20px
+        list-style: none
+        margin: 0
+        +transition(all .3s)
+        &:last-child
+          margin-bottom: 0
+        &.sh-only
+          display: none
+        &> a
+          color: inherit
+          display: block
+          padding-bottom: 10px
+        &:hover
+          &> a
+            font-weight: normal
+            color: $primary
+  +mobile
+    position: absolute
+
+body.menu-hidden
+  nav.menu-wrap
+    width: 70px
+    width: 40px
+    padding-top: 50px
+    overflow-y: initial
+    .menu-toggle
+      right: auto
+      left: 0
+      top: 20px
+      width: 100%
+      height: 15px
+      // padding-left: 10px
+      text-align: center
+      font-size: 21px
+      background-color: transparent
+      color: #C3CDD4
+      &:before
+        content: "\f101"
+        font-family: FontAwesome
+        position: relative
+        top: -5px
+      &:hover
+        color: $primary
+    .sidebar-head
+      width: 200px
+      position: absolute
+      left: 40px
+      top: 0
+      padding-top: 20px
+      .logo
+        color: #FFF
+        img
+          display: none
+    .main-menu
+      &> li 
+        padding: 10px
+        margin-right: 0
+        border-left: 3px solid #FFF
+        &> a
+          span
+            display: none
+          .fa
+            position: absolute
+            opacity: 0
+            width: calc(100% + 10px)
+            height: calc(100% + 20px)
+            left: -10px
+            top: -10px
+            padding: 0
+        &:hover,
+        &.mo
+          z-index: 101
+          background-color: $primary
+          border-left: 3px solid $primary
+          .svg path
+            fill: #FFF
+        &.active
+          border-left: 3px solid $primary
+      .sub-menu
+        padding: 8px
+        background-color: $primary
+        color: #FFF
+        position: absolute
+        min-width: 240px
+        left: 100%
+        top: 0
+        border-radius: 0 2px 2px 2px
+        &> li
+          padding: 0
+          margin: 0
+          border-radius: 2px
+          a
+            padding: 5px 10px
+          &:hover,
+          &.active-sub
+            background-color: $primary-dark
+            &> a
+              color: #FFF
+          &.sh-only
+            display: block
+
+  .content-wrap
+    margin-left: 40px

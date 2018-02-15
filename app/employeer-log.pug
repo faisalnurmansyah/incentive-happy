@@ -1,0 +1,119 @@
+extends templates/layout.pug
+
+block vars
+  -var activepage = "employeer"
+
+block content
+  .content-wrap
+    .content-header
+      h1 Employeer
+        .sub-head Log
+    .content-body
+      .status-section
+        .row
+          .col-sm-4
+            .status-item
+              h3 Name
+              p Vinna L
+          .col-sm-4
+            .status-item
+              h3 Title
+              p PM
+          .col-sm-4
+            .status-item
+              h3 Minus to Date
+              p 26 Feb 2017
+      .table-custom.box-wrap
+          table
+            thead
+              tr
+                //- th(rowspan="2").has-check
+                //-   .check
+                //-     input.checkAll(id="check01" type="checkbox")
+                //-     label(for="check01")
+                th(rowspan="2") No
+                th(rowspan="2") Project Name
+                th.text-center(colspan="4") Timeline
+                th(rowspan="2") Minus
+                th(rowspan="2") Incentive Value
+              tr.sub-thead
+                th Start Date
+                th End Date
+                th Actual Date
+                th Delayed (days)
+            tbody
+              tr.new
+                td 1
+                td Project Happy
+                td 12 Feb 2017 
+                td 19 Feb 2017
+                td 29 Feb 2017
+                td 3 Days
+                td Rp 2.000.000
+                td Rp 500.000
+              tr
+                td 2
+                td Project Happys
+                td 12 Feb 2017 
+                td 19 Feb 2017
+                td 29 Feb 2017
+                td 3 Days
+                td Rp 2.000.000
+                td Rp 500.000
+              tr
+                td 3
+                td Project Happys
+                td 12 Feb 2017 
+                td 19 Feb 2017
+                td 29 Feb 2017
+                td 3 Days
+                td Rp 2.000.000
+                td Rp 500.000
+              tr
+                td 4
+                td Project Happys
+                td 12 Feb 2017 
+                td 19 Feb 2017
+                td 29 Feb 2017
+                td 3 Days
+                td Rp 2.000.000
+                td Rp 500.000
+              tr
+                td 5
+                td Project Happys
+                td 12 Feb 2017 
+                td 19 Feb 2017
+                td 29 Feb 2017
+                td 3 Days
+                td Rp 2.000.000
+                td Rp 500.000
+          .table-foot
+            .lwrap
+              select.select(data-width="100%" data-size="auto")
+                option Show 10
+                option Show 25
+                option Show 50
+            .pagination-wrap
+              span 1-10 of 100
+              ul.pagination
+                li.disabled
+                  a(href="#")
+                    span.fa.fa-angle-left.prev
+                li
+                  a(href="#")
+                    span.fa.fa-angle-right.next
+
+
+
+block modal
+  #modalDelete.modal.fade(tabindex="-1" role="dialog")
+    .modal-dialog.modal-sm
+      .modal-content
+        .modal-header
+          img.close(src="images/icon-close.png" data-dismiss="modal" aria-label="Close")
+          h4.modal-title Hapus Client
+        .modal-body
+          p Apakah Anda yakin untuk menghapus [nama client]?
+        .modal-footer
+          button.btn.btn-default(type="button" data-dismiss="modal") Cancel
+          button.btn.btn-primary(type="button") Delete

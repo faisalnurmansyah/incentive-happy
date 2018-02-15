@@ -1,0 +1,29 @@
+nav.menu-wrap
+  .sidebar-head
+    .logo
+      a(href="home.html")
+        img(src="images/harnods-logo.svg")
+      | Incentive Happy!
+  .menu-toggle
+  ul.main-menu
+    
+    li(class=activepage =="project"? "active":"" )
+      a(href="project.html")
+        img.svg(src="images/icon-po.svg")
+        span Project
+    
+    li(class=activepage =="employeer"? "active":"" )
+      a(href="employeer.html")
+        img.svg(src="images/icon-client.svg")
+        span Employeer
+      //-   i.fa.fa-angle-down
+      //- ul.sub-menu
+      //-   li(class=activesub =="orderAll"? "active-sub":"" )
+      //-     a(href="po-all.html") Semua Purchase Order
+      //-   li(class=activesub =="subkonAll"? "active-sub":"" )
+      //-     a(href="subkon-all.html") Semua Subkon
+    
+    li(class=activepage =="settings"? "active":"" )
+      a(href="settings.html")
+        img.svg(src="images/icon-settings.svg")
+        span Settings

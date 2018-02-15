@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./dependsOn.min.js"></script>
+</head>
+<body>
+    <div class="field field-numbers">
+        <label>Number</label>
+        <select name="numbers">
+            <option>One</option>        
+            <option>Two</option>
+            <option>Three</option>
+        </select>
+    </div>
+    <div class="field field-chars">
+        <label>Char</label>
+        <select name="chars">
+            <option>A</option>        
+            <option class="depend-B">B</option>
+            <option>C</option>       
+            <option>D</option>
+        </select>
+    </div>
+<script>
+$(function() {
+        $('.depend-B').dependsOn({
+                '.field-numbers  select': {
+                    values: ['One']
+                }
+        }).or({
+                '.field-numbers select': {
+                    values: ['Two']
+                }                     
+        });
+});
+</script>
+</body>
+</html>

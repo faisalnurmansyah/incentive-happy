@@ -1,0 +1,103 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* cistom modal */
+/* ------------------------------------------------------------------------------------------------ */
+
+// body.modal-open
+//   .modal
+//     display: flex !important
+//     align-items: center
+
+.modal-content
+  width:inherit
+  height:inherit
+  margin: 0 auto
+  pointer-events: all
+
+
+.modal-backdrop
+  background-color: rgba(33,43,54,0.4)
+
+.modal-dialog
+  width: 770px
+  .modal-content
+    box-shadow: 0 31px 41px 0 rgba(33,43,54,0.2), 0 2px 16px 0 rgba(33,43,54,0.08)
+    border: 0
+    border-radius: 2px
+    .modal-header
+      border-radius: 2px 2px 0 0
+      background-color: #F4F6F8
+      border-bottom: 1px solid $border
+      padding: 17px 30px
+      .close
+        width: 16px
+        height: 16px
+        margin: 4px 0 0 0
+        opacity: 1
+        &:hover
+          opacity: .5
+      .modal-title
+        font-size: 18px
+        line-height: 25px
+        font-weight: 600
+    .modal-body
+      padding: 30px
+    .modal-footer
+      border-radius: 0 0 2px 2px
+      padding: 20px 30px 60px
+      .btn
+        padding: 0 50px
+      .btn + .btn
+        margin-left: 10px
+
+  &.modal-sm
+    width: 350px
+    .modal-content
+      .modal-header
+        padding: 17px 20px
+      .modal-body
+        padding: 20px
+      .modal-footer
+        padding: 20px
+      .btn
+        padding: 0 25px
+
+
+
+//LIGHTBOX
+.lightboxOverlay
+  // background-color: rgba(33, 43, 54, 0.4)
+.lightbox
+  top: -300px !important
+  transition: all .3s !important
+  .lb-outerContainer
+    border-radius: 0
+  .lb-image
+    border-radius: 0
+  .lb-nav 
+    width: auto
+    left: -70px
+    right: -70px
+    a.lb-prev,
+    a.lb-next
+      opacity: 0.6
+      &:hover
+        opacity: 1
+  .lb-dataContainer
+    position: absolute
+    left: 0
+    bottom: 0
+    .lb-details
+      display: none
+  .lb-data .lb-close
+    margin: 25px
+    position: fixed
+    top: 0
+    right: 0
+
+.lb-disable-scrolling
+  .lightbox
+    top: 0 !important
+    display: flex !important
+    align-items: center
+    justify-content: center
+    height: 100vh

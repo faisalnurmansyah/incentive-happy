@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Incentive Happy!</title>
+  <meta name="description" content=""/>
+  <link rel="stylesheet" href="styles/plugins.css"/>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <body></body>
+  <div id="wrap">
+    <header>
+      <div class="right">
+        <div class="account dropdown">
+          <div class="avatar" data-toggle="dropdown"><img src="images/profile-pic.jpg"/></div>
+          <div class="bound" data-toggle="dropdown"><span class="username">Jhon Doe</span><span class="role">Administrator</span></div>
+          <div class="dropdown-menu">
+            <ul>
+              <li> <a href="login.html">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="menu-wrap">
+        <div class="sidebar-head">
+          <div class="logo"><a href="home.html"><img src="images/harnods-logo.svg"/></a>Incentive Happy!</div>
+        </div>
+        <div class="menu-toggle"></div>
+        <ul class="main-menu">
+          <li><a href="project.html"><img class="svg" src="images/icon-po.svg"/><span>Project</span></a></li>
+          <li class="active"><a href="employeer.html"><img class="svg" src="images/icon-client.svg"/><span>Employeer</span></a></li>
+          <li><a href="settings.html"><img class="svg" src="images/icon-settings.svg"/><span>Settings</span></a></li>
+        </ul>
+      </nav>
+      <div class="content-wrap">
+        <div class="content-header">
+          <h1>Employeer
+            <div class="sub-head">Add</div>
+          </h1>
+        </div>
+        <div class="content-body">
+          <div class="section-form">
+            <div class="form-main">
+              <div class="form-group">
+                <label>Project Name</label>
+                <input class="form-control" type="text" name="nama_klien" required="required"/>
+              </div>
+              <div class="form-group">
+                <label>Project Type</label>
+                <select class="selectpicker" name="klasifikasi_klien" required="required">
+                  <option selected="selected">Select Project Type</option>
+                  <option>Design UI/UX</option>
+                  <option>Prototype (HTML)</option>
+                  <option>Website Development</option>
+                  <option>Web App</option>
+                  <option>Mobile App</option>
+                  <option>Web App + Mobile App</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Timeline</label>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="inp-group date">
+                      <label>Start Date</label>
+                      <input class="form-control" id="tanggal" type="text" name="tanggal" required="required"/>
+                      <div class="addon">
+                        <label class="fa fa-calendar" for="tanggal"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="inp-group date">
+                      <label>End Date</label>
+                      <input class="form-control" id="tanggal" type="text" name="tanggal" required="required"/>
+                      <div class="addon">
+                        <label class="fa fa-calendar" for="tanggal"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="inp-group date">
+                      <label>Actual Date</label>
+                      <input class="form-control" id="tanggal" type="text" name="tanggal" required="required"/>
+                      <div class="addon">
+                        <label class="fa fa-calendar" for="tanggal"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Incentive Value</label>
+                <div class="inp-group curren">
+                  <div class="addon">Rp</div>
+                  <input class="form-control currency" type="text" name="ope_tidak_ditagih" required="required"/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Team</label>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="inp-group">
+                      <label>Name</label>
+                      <select class="selectpicker" name="klasifikasi_klien" required="required">
+                        <option selected="selected">Employeer</option>
+                        <option>Employeer 1</option>
+                        <option>Employeer 2</option>
+                        <option>Employeer 3</option>
+                        <option>Employeer 4</option>
+                        <option>Employeer 5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="inp-group">
+                      <label>Title</label>
+                      <select class="selectpicker" name="klasifikasi_klien" required="required">
+                        <option selected="selected">Backend Developer</option>
+                        <option>Frontend Designer</option>
+                        <option>QA/QC</option>
+                        <option>PM</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>&nbsp;</label>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="inp-group">
+                      <label>Value %</label>
+                      <input class="form-control" type="text" name="nama_klien" required="required"/>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="inp-group">
+                      <label>Amount</label>
+                      <div class="inp-group curren">
+                        <div class="addon">Rp</div>
+                        <input class="form-control currency" type="text" name="ope_tidak_ditagih" required="required"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Status</label>
+                <select class="selectpicker" name="klasifikasi_klien" required="required">
+                  <option selected="selected">On progress</option>
+                  <option>On-time</option>
+                  <option>Delayed (- 1 week)</option>
+                  <option>Delayed (- 2 week)</option>
+                  <option>Delayed (- 3 week)</option>
+                  <option>Delayed (- 4 week)</option>
+                  <option>No Incentive (0)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="pull-left">Additional Information</label>
+                <textarea class="form-control" type="text" name="nama_klien" required="required"></textarea>
+              </div>
+            </div>
+            <div class="form-foot">
+              <div class="pull-right">
+                <btn class="btn btn-default" type="button">Cancel</btn><a class="btn btn-green" id="saveButton" href="#">Save</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header"><img class="close" src="images/icon-close.png" data-dismiss="modal" aria-label="Close"/>
+            <h4 class="modal-title">Hapus Client</h4>
+          </div>
+          <div class="modal-body">
+            <p>Apakah Anda yakin untuk menghapus [nama client]?</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" type="button">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="plugins/jquery-1.12.0.min/index.js"></script>
+  <script src="plugins/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+  <script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="plugins/bootstrap-datepicker/moment.min.js"></script>
+  <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="plugins/bootstrap-datepicker/daterangepicker.js"></script>
+  <script src="plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="plugins/matchHeight/dist/jquery.matchHeight-min.js"></script>
+  <script src="plugins/owl.carousel/owl.carousel.min.js"></script>
+  <script src="plugins/lightbox/dist/js/lightbox.min.js"></script>
+  <script src="plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="plugins/mask-master/dist/jquery.mask.js"></script>
+  <script src="plugins/dependsOn/dependsOn.min.js"></script>
+  <script src="plugins/summernote/summernote.min.js"></script>
+  <script src="scripts/main.js"></script>
+</html>

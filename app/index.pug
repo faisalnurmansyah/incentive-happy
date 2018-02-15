@@ -1,0 +1,55 @@
+mixin list(text, href)
+  .index-card-item
+    a(href=href target="_blank") #{text}
+
+mixin listPar(text)
+  .index-card-item.has-child
+    a(href="javascript:;") #{text}
+    if block
+      ul
+        block
+
+mixin listSub(text, href)
+  li.index-card-item
+    a(href=href target="_blank") #{text}
+
+
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Incentive Happy!
+    meta(name="description" content="")
+    link(rel="stylesheet" href="styles/plugins.css")
+    link(rel="stylesheet" href="styles/preview.css")
+
+body
+  main.preview
+    .index-card
+      .index-card-label
+        span Page Template
+      .index-card-header
+        h2.company-name
+          | Incentive Happy
+      .index-card-list-wrap
+        //- +listPar('Account')
+        //-   +listSub('Login',"login.html")
+        +list('Login',"login.html")
+        +list('Project', "project.html")
+        +list('Employeer', "employeer.html")
+        +list('Settings', "settings.html")
+
+
+  script(src="plugins/jquery-1.12.0.min/index.js")
+
+  script.
+    $('.has-child').click(function(){
+      event.stopPropagation();
+      $(this).toggleClass('open');
+    });
+    $(document).click( function(){
+      $('.has-child').removeClass('open');
+    });

@@ -1,0 +1,216 @@
+extends templates/layout.pug
+
+block vars
+  -var activepage = "employeer"
+
+block content
+  .content-wrap
+    .content-header
+      h1 Employeer
+      .fr-wrap
+        a.btn.btn-green(href="#modalAddEmployeer" data-toggle="modal") Add Employeer
+    .content-body
+      .content-top
+        .filter
+          form
+            .form-group
+              label Status
+              select.select(title="Status Project")
+                option(selected) On progress
+                option On-time
+                option Delayed (- 1 week)
+                option Delayed (- 2 week)
+                option Delayed (- 3 week)
+                option Delayed (- 4 week)
+                option No Incentive (0)
+            .form-action
+              button.btn.btn-default(type="button") Search
+        .search-box
+          label Search
+          .search
+            input.form-control(placeholder="Search Project Name")
+            button.fa.fa-search(type="button")
+
+      .table-custom.box-wrap       
+        table
+          thead
+            tr
+              th(rowspan="2").has-check
+                .check
+                  input.checkAll(id="check01" type="checkbox")
+                  label(for="check01")
+              th No
+              th Name
+              th Title
+              th Total Incentive to Date
+              th Minus
+              th Log
+          tbody
+            tr.new
+              td.has-check
+                .check
+                  input(id="check01" type="checkbox")
+                  label(for="check01")
+              td 1
+              td Vinna
+              td PM
+              td Rp 2.000.000
+              td -350%
+              td 
+                .more-action
+                  .dropdown
+                    button.btn-more(data-toggle="dropdown")
+                      span
+                      span
+                      span
+                    .dropdown-menu
+                      ul
+                        li 
+                          a(href="employeer-log.html") Detail
+            tr
+              td.has-check
+                .check
+                  input(id="check02" type="checkbox")
+                  label(for="check02")
+              td 2
+              td Vinna
+              td PM
+              td Rp 2.000.000
+              td -350%
+              td 
+                .more-action
+                  .dropdown
+                    button.btn-more(data-toggle="dropdown")
+                      span
+                      span
+                      span
+                    .dropdown-menu
+                      ul
+                        li 
+                          a(href="employeer-log.html") Detail
+            tr
+              td.has-check
+                .check
+                  input(id="check03" type="checkbox")
+                  label(for="check03")
+              td 3
+              td Vinna
+              td PM
+              td Rp 2.000.000
+              td -350%
+              td 
+                .more-action
+                  .dropdown
+                    button.btn-more(data-toggle="dropdown")
+                      span
+                      span
+                      span
+                    .dropdown-menu
+                      ul
+                        li 
+                          a(href="employeer-log.html") Detail
+            tr
+              td.has-check
+                .check
+                  input(id="check04" type="checkbox")
+                  label(for="check04")
+              td 4
+              td Vinna
+              td PM
+              td Rp 2.000.000
+              td -350%
+              td 
+                .more-action
+                  .dropdown
+                    button.btn-more(data-toggle="dropdown")
+                      span
+                      span
+                      span
+                    .dropdown-menu
+                      ul
+                        li 
+                          a(href="employeer-log.html") Detail
+            tr
+              td.has-check
+                .check
+                  input(id="check05" type="checkbox")
+                  label(for="check05")
+              td 5
+              td Vinna
+              td PM
+              td Rp 2.000.000
+              td -350%
+              td 
+                .more-action
+                  .dropdown
+                    button.btn-more(data-toggle="dropdown")
+                      span
+                      span
+                      span
+                    .dropdown-menu
+                      ul
+                        li 
+                          a(href="employeer-log.html") Detail
+        .table-foot
+          .lwrap
+            //- select.select(data-width="100%" data-size="auto" title="Bulk Action")
+            //-   option Delete
+            .dropdown
+              button.btn.btn-default.btn-select(data-toggle="dropdown") Bulk Action
+                //- i.fa.fa-sort
+              .dropdown-menu
+                ul
+                  li 
+                    a(href="#modalDelete" data-toggle="modal") Delete
+          .lwrap
+            select.select(data-width="100%" data-size="auto")
+              option Show 10
+              option Show 25
+              option Show 50
+          .pagination-wrap
+            span 1-10 of 100
+            ul.pagination
+              li.disabled
+                a(href="#")
+                  span.fa.fa-angle-left.prev
+              li
+                a(href="#")
+                  span.fa.fa-angle-right.next
+
+
+block modal
+  #modalDelete.modal.fade(tabindex="-1" role="dialog")
+    .modal-dialog.modal-sm
+      .modal-content
+        .modal-header
+          img.close(src="images/icon-close.png" data-dismiss="modal" aria-label="Close")
+          h4.modal-title Hapus Client
+        .modal-body
+          p Apakah Anda yakin untuk menghapus [nama client]?
+        .modal-footer
+          button.btn.btn-default(type="button" data-dismiss="modal") Cancel
+          button.btn.btn-green(type="button") Delete
+  #modalAddEmployeer.modal.fade.mdl-custom-right(tabindex="-1" role="dialog")
+    .modal-dialog
+      .modal-content.setheight
+        .modal-header
+          img.close(src="images/icon-close.png" data-dismiss="modal" aria-label="Close")
+          h4.modal-title Add New Employeer
+        .modal-body
+          .section-form
+            .form-main
+              .form-group
+                  label Employeer Name
+                  input.form-control(type="text" name="employeer_name" required)
+              .form-group
+                label Employeer Name
+                select.select(name="employeer_name" required)
+                  option(selected) Backend Developer
+                  option Frontend Designer
+                  option QA/QC
+                  option PM
+        .modal-footer
+          .form-foot
+            .pull-right
+              btn.btn.btn-default(type="button") Cancel
+              a.btn.btn-green#saveButton(href="#") Add

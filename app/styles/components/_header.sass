@@ -1,0 +1,174 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------------------------------------------------------ */
+
+header + main
+  padding-top: 62px
+  +mobile
+    padding-top: 0
+
+header
+  min-height: 60px
+  background-color: $primary
+  color: #FFF
+  position: fixed
+  z-index: 99
+  right: 0
+  left: 0
+  top: 0
+  padding: 13px 30px 13px 20px
+  .logo,
+  .user-role  
+    display: inline-block
+    vertical-align: middle
+    line-height: 34px
+    margin-right: 20px
+    img
+      max-height: 34px
+  .logo
+    font-size: 28px
+    font-weight: 700
+
+  .right
+    float: right    
+
+  .notification
+    display: inline-block
+    vertical-align: middle
+    &> a
+      width: 18px
+      height: 20px
+      background-image: url(../images/icon-notifications.svg)
+      margin: 6px 0
+      display: block
+      position: relative
+      .indicator
+        position: absolute
+        right: -12px
+        bottom: -6px
+        display: block
+        background-color: $primary
+        color: #FFF
+        border-radius: 20px
+        width: 20px
+        height: 20px
+        font-size: 12px
+        line-height: 20px
+        text-align: center
+    .dropdown-menu
+      width: 300px
+      left: calc(50% - 150px)
+      margin-top: 10px
+      &:before
+        content: ""
+        display: block
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 8px 8px 8px
+        border-color: transparent transparent #FFF transparent
+        position: absolute
+        top: -8px
+        left: calc(50% - 8px)
+      ul
+        max-height: 290px
+        overflow-y: auto
+        li
+          .small
+            display: block
+            color: #8d8b8a
+          a:hover
+            color: $text
+            background-color: $border
+        li.new
+          background-color: rgba(252,240,205,0.7)
+          border-bottom: 1px solid $border
+      .see-all
+        border-top: 1px solid $border
+        margin-top: 5px
+        padding-top: 5px
+        text-align: center
+        a
+          color: $primary
+          &:hover
+            background-color: transparent
+            color: $primary
+            text-decoration: underline
+    .empty-text
+      background-color: #fff
+      padding: 15px
+      border-radius: 2px
+      position: absolute
+      color: #8d8b8a
+      width: 300px
+      left: calc(50% - 150px)
+      margin-top: 0
+      text-align: center
+      opacity: 0
+      visibility: hidden
+      transition: all .3s
+      &:before
+        content: ""
+        display: block
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 8px 8px 8px
+        border-color: transparent transparent #FFF transparent
+        position: absolute
+        top: -8px
+        left: calc(50% - 8px)
+    &.empty:hover
+      .empty-text
+        opacity: 1
+        visibility: visible
+        margin-top: 10px
+
+
+  .account
+    display: inline-block
+    vertical-align: middle
+    margin-left: 55px
+    .dropdown-menu
+      left: auto
+      right: 0
+      text-align: right
+      margin-top: 10px
+      &:before
+        content: ""
+        display: block
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 8px 8px 8px
+        border-color: transparent transparent #FFF transparent
+        position: absolute
+        top: -8px
+        right: 15px
+    .avatar
+      float: left
+      width: 36px
+      height: 36px
+      border-radius: 36px
+      overflow: hidden
+      cursor: pointer
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    .bound
+      float: left
+      display: block
+      margin-left: 15px
+      cursor: pointer
+      span
+        display: block
+      .username
+        font-size: 16px
+      .role
+        font-size: 12px
+        line-height: 14px
+        color: #FFF
+
+  +mobile
+    position: relative

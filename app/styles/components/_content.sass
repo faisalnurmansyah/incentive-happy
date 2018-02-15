@@ -1,0 +1,419 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* Content */
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Login Page Old */
+
+// .account-bg
+//   @extend .clearfix
+//   background-color: $bg-green
+//   width: 100%
+//   min-height: 100vh
+//   .account-bg-img
+//     width: 500px
+//     min-height: 100vh
+//     float: left
+//     padding-top: 0
+//     background-size: cover
+//     background-repeat: no-repeat
+//     background-position: center center
+//     position: relative
+//     &:before
+//       content: " "
+//       width: 100%
+//       min-height: 100vh
+//       position: absolute
+//       left: 0
+//       top: 0
+//       background-color: rgba(0, 0, 0, 0.4)
+//       z-index: 3
+//   .account-wrap
+//     width: calc(100% - 500px)
+//     float: right
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     flex-wrap: wrap
+//     flex-direction: column
+//     padding-top: 80px
+//     .account-icon
+//       width: 100px
+//       height: 80px
+//       padding: 10px
+//       display: block
+//       z-index: 4
+//       margin-bottom: 30px
+//     .logo
+//       font-size: 33px
+//       color: $primary
+//       font-weight: 700
+//       margin-bottom: 10px
+//     .form-login
+//       width: 250px
+//       .link
+//         text-align: right
+//         display: block
+//         margin: 10px 0
+
+
+/* Login Page v2 */
+
+// .account-bg
+//   @extend .clearfix
+//   background-color: $bg-green
+//   width: 100%
+//   min-height: 100vh
+//   position: relative
+//   .account-bg-img
+//     width: 100%
+//     min-height: 100vh
+//     background-attachment: fixed
+//     float: left
+//     padding-top: 0
+//     background-size: cover
+//     background-repeat: no-repeat
+//     background-position: center center
+//     position: relative
+//     > img
+//       transform: scaleX(-1)
+//     &:before
+//       content: " "
+//       width: 100%
+//       min-height: 100vh
+//       position: absolute
+//       left: 0
+//       top: 0
+//       background-color: rgba(0, 0, 0, 0.4)
+//       z-index: 3
+//   .account-wrap
+//     position: absolute
+//     top: 20%
+//     bottom: auto
+//     width: 100%
+//     // height: 20vh
+//     display: flex
+//     align-items: center
+//     justify-content: flex-start
+//     flex-wrap: wrap
+//     flex-direction: column
+//     z-index: 10
+//     .form-login
+//       text-align: left
+//       min-width: 50%
+//       position: absolute
+//       padding: 30px
+//       background: #FFF
+//       z-index: 5
+//       top: -215%
+//       border-radius: 3px
+//       box-shadow: 6px 14px 51px 3px rgba(94,94,94,0.42)
+//       overflow: hidden
+//       @extend .clearfix
+//       form
+//         float: right
+//         width: 40%
+//         margin: 0 auto
+
+//     .account-icon
+//       width: 440px;
+//       height: auto;
+//       /* padding: 10px; */
+//       left: -65px;
+//       top: -70px;
+//       right: 0
+//       display: block;
+//       position: absolute;
+//       z-index: 4;
+//       opacity: 1.8;
+//     .logo
+//       font-size: 32px;
+//       color: $primary
+//       font-weight: 800;
+//       margin-bottom: 10px;
+//       // position: absolute;
+//       top: -61px;
+//       right: 0;
+//       left: 30px;
+//     .form-login
+//       width: 250px
+//       .link
+//         text-align: right
+//         display: block
+//         margin: 10px 0
+
+
+/* Login Page v3*/
+
+.account-bg
+  @extend .clearfix
+  background-color: $bg-green
+  width: 80vw
+  min-height: 100vh
+  position: relative
+  .account-bg-img
+    width: 100%
+    min-height: 100vh
+    background-attachment: fixed
+    float: left
+    padding-top: 0
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+    > img
+      transform: scaleX(-1)
+    &:before
+      content: " "
+      width: 100%
+      min-height: 100vh
+      position: absolute
+      left: 0
+      top: 0
+      background-color: rgba(0, 0, 0, 0.4)
+      z-index: 3
+.account-wrap
+  @extend .clearfix
+  position: absolute
+  top: calc(50% - 200px)
+  right: 7%
+  bottom: auto
+  width: 350px
+  // height: 20vh
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+  flex-direction: column
+  z-index: 10
+  .form-login
+    text-align: left
+    position: absolute
+    padding: 30px
+    background: #FFF
+    z-index: 5
+    border-radius: 3px
+    box-shadow: 6px 14px 51px 3px rgba(94,94,94,0.42)
+    overflow: hidden
+    @extend .clearfix
+    form
+      // float: right
+      // width: 40%
+      margin: 0 auto
+    .link
+      text-align: right
+      display: block
+      margin: 10px 0
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    @keyframes fadein
+      from
+        opacity:0;
+      to 
+        opacity:1;
+    @-moz-keyframes fadein /* Firefox */
+      from
+        opacity:0;
+      to
+        opacity:1;
+    @-webkit-keyframes fadein /* Safari and Chrome */
+      from
+        opacity:0;
+      to
+        opacity:1;
+    @-o-keyframes fadein /* Opera */
+      from
+        opacity:0;
+      to
+        opacity: 1;
+      
+  .account-icon
+    width: 50px;
+    height: auto;
+    margin-right: 15px
+    margin-bottom: 15px
+    /* padding: 10px; */
+    // left: -65px;
+    // top: -70px;
+    right: 0
+    display: inline-block;
+    // position: absolute;
+    z-index: 4;
+  .logo
+    font-size: 28px;
+    line-height: 40px
+    display: inline-block
+    color: $primary
+    font-weight: 800;
+    margin-bottom: 10px;
+    // position: absolute;
+  
++maxtablet
+  .account-bg
+    width: 100%
+  .account-wrap
+    width: 300px
+    right: 3%
+    .logo
+      font-size: 22px
++mobile
+  .account-wrap
+    right: 0
+    left: 0
+    margin: 0 auto
+    float: none  
+
+/* Content */
+.content-wrap
+  margin: 0 0 0 240px
+  padding: 30px
+  padding-top: 0
+  min-height: calc(100vh - 62px)
+  transition: all 0.3s
+  .content-header
+    margin: 0 -30px
+    padding: 15px 0
+    padding-left: 30px
+    background-color: #FFF
+    margin-bottom: 30px
+    position: relative
+    box-shadow: inset 0px -5px 2px -3px rgba(0, 0, 0, 0.1)
+    h1
+      font-size: 28px
+      line-height: 33px
+      font-weight: 600
+      margin-bottom: 0
+      padding-left: 15px
+      .sub-head
+        font-size: 14px
+        display: inline-block
+        margin-left: 20px
+        position: relative
+        &:before
+          content: "-"
+          font-size: 20px
+          position: absolute
+          display: inline-block
+          left: -15px
+    .fr-wrap 
+      position: absolute
+      right: 30px
+      top: 10px
+
+  .content-body
+    background-color: #FFF
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08)
+    padding: 15px
+    .content-top
+      @extend .clearfix
+
+.filter
+  float: left
+  max-width: calc(100% - 280px)
+  position: relative
+  .form-group
+    float: left
+    width: 200px
+    margin-right: 15px
+    &:last-child
+      margin-right: 0 
+      margin-bottom: 20px     
+  .form-action
+    float: left
+    padding-top: 29px
+    .btn
+      font-weight: normal
+      color: #1F2B34
+      border: 1px solid #DEE4E8
+      border-radius: 2px
+      font-size: 15px;
+      box-shadow: none
+      transition: all 0.3s
+  +responsive(1700px, 0)
+    max-width: calc(100% - 200px)
+    .form-group
+      width: 170px
+      &.lg
+        width: 200px
+  +responsive(1500px, 0)
+    max-width: calc(100% - 200px)
+    .form-group
+      width: 175px
+      &.lg
+        width: 200px
+
+.search-box
+  float: right
+  width: 280px
+  margin-bottom: 20px
+  .search
+    width: 100%
+    position: relative
+    input
+      width: 100%
+      padding-right: 30px
+    .fa
+      position: absolute
+      right: 5px
+      top: calc(50% - 9px)
+      border: 0
+      background: transparent
+      color: #919EAB
+      &:hover
+        color: $primary
+  +responsive(1700px, 0)
+    width: 200px
+  +responsive(1500px, 0)
+    width: 250px
+
+.status-section
+  .status-item
+    h3
+      font-weight: 700
+      margin-bottom: 15px
+
+.box-wrap
+  border: 1px solid #DEE4E8
+  border-radius: 2px
+  background-color: #FFF
+
+.content-body 
+  .section-form
+    .form-main
+      width: 60%
+    .form-foot
+      @extend .clearfix
+      border-top: 1px solid #DEE4E8
+      margin-top: 20px
+      padding: 20px 0 30px
+      .btn
+        line-height: 28px
+        min-width: 100px
+        &+ .btn
+          margin-left: 10px
+
+.setting-list
+  padding: 0
+  margin: -15px
+  li
+    @extend .clearfix
+    list-style: none
+    padding: 20px 30px
+    margin: 0
+    border-bottom: 1px solid #DEE4E8
+    h2
+      font-size: 21px
+      line-height: 40px
+      font-weight: 600
+      margin-bottom: 0
+      float: left
+    .btn-manage
+      font-size: 16px
+      float: right
+      width: 170px
+
+.modal-body
+  .section-form
+    .form-main
+      padding-right: 60px

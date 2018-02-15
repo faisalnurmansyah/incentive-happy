@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Incentive Happy!</title>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="styles/plugins.css"/>
+    <link rel="stylesheet" href="styles/preview.css"/>
+  </head>
+</html>
+<body>
+  <main class="preview">
+    <div class="index-card">
+      <div class="index-card-label"><span>Page Template</span></div>
+      <div class="index-card-header">
+        <h2 class="company-name">Incentive Happy</h2>
+      </div>
+      <div class="index-card-list-wrap">
+        <div class="index-card-item"><a href="login.html" target="_blank">Login</a></div>
+        <div class="index-card-item"><a href="project.html" target="_blank">Project</a></div>
+        <div class="index-card-item"><a href="employeer.html" target="_blank">Employeer</a></div>
+        <div class="index-card-item"><a href="settings.html" target="_blank">Settings</a></div>
+      </div>
+    </div>
+  </main>
+  <script src="plugins/jquery-1.12.0.min/index.js"></script>
+  <script>
+    $('.has-child').click(function(){
+      event.stopPropagation();
+      $(this).toggleClass('open');
+    });
+    $(document).click( function(){
+      $('.has-child').removeClass('open');
+    });
+  </script>
+</body>

@@ -1,0 +1,322 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* General */
+/* ------------------------------------------------------------------------------------------------ */
+
+a
+  color: $primary
+
+.dropdown-menu ul 
+    padding-left: 0
+    margin-bottom: 0
+    > li
+      display: block
+      > a
+        display: block
+        padding: 5px 20px
+        &:hover
+          background-color: $primary
+          color: #FFF
+
+
+.btn
+  height: 40px
+  &:focus, 
+  &.focus, 
+  &:active:focus, 
+  &:active.focus, 
+  &.active:focus, 
+  &.active.focus
+    outline: $primary
+    color: #FFF
+
+.btn-green
+  background-color: $primary
+  border: 1px solid $primary
+  box-shadow: 0 2px 0 0 $primary-darken
+  color: #FFF
+  line-height: 28px
+  transition: all .3s
+  &:hover
+    background-color: $primary-darken
+    border: 1px solid $primary-darken
+    box-shadow: none
+    color: #FFF
+  &:focus, 
+  &.focus, 
+  &:active:focus, 
+  &:active.focus, 
+  &.active:focus, 
+  &.active.focus
+    outline: $primary
+    color: #FFF
+
+.table-custom
+  table
+    border-collapse: separate
+    border-bottom: 1px solid #DEE4E8
+    border-radius: 2px 2px 0 0
+    width: 100%
+    background-color: #FFF
+    text-align: center
+    th,
+    td
+      border-top: 1px solid #DEE4E8 
+      padding: 10px
+      vertical-align: middle
+    th
+      border-left: 1px solid #DEE4E8
+      border-top: 0
+      text-align: center
+      line-height: 16px
+
+      &:first-child()
+        border-left: 0
+    .has-check
+      padding-right: 0
+      padding-left: 0
+      width: 30px
+      .check
+        width: 40px
+    .sub-thead
+      th
+        border-top: 1px solid #DEE4E8
+        &:first-child()
+          border-left: 1px solid #DEE4E8
+    td
+      padding: 15px 4px
+    tr.new
+      position: relative
+      td
+        background-color: rgba(252, 240, 205, 0.7)
+        position: relative
+        &:first-child
+          &:before
+            content: ""
+            width: 3px
+            display: block
+            background-color: #EDC200
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+
+  .table-foot
+    @extend .clearfix
+    padding: 20px
+    background-color: #FFF
+    border-top: 0
+  .lwrap
+    float: left
+    margin-right: 10px
+  .rwrap
+    float: right
+    margin-left: 10px
+  .more-action
+    text-align: right
+    .btn-more
+      box-shadow: none
+      padding: 13px 6px
+      outline: none
+      width: 35px
+      text-align: center
+      border: 0
+      background-color: transparent
+      span
+        display: inline-block
+        width: 4px
+        height: 4px
+        border-radius: 2px
+        background-color: #676767
+        margin: 0 1.5px
+        float: left
+        &:last-child
+          margin-right: 0
+    .dropdown
+      .dropdown-menu
+        left: auto
+        right: 0
+    .dropdown
+      .btn
+        width: 80%
+  .pagination-wrap
+    float: right
+    margin: 0
+    line-height: 40px
+    a
+      color: #919EAB
+      &:hover
+        color: $primary-dark
+    .fa:before
+      font-size: 24px
+      position: relative
+
+    span
+      line-height: 40px
+      display: inline-block
+      vertical-align: middle
+    .pagination
+      display: inline-block
+      vertical-align: middle
+      margin: 0
+      padding-left: 5px
+      li
+        &.disabled
+          display: none
+        a
+          padding: 0
+          line-height: 40px
+          border: 0
+          span
+            display: block
+            &.prev
+              margin-right: 5px
+            &.next
+              margin-left: 5px
+            &.disabled
+              display: none
+          &:hover,
+          &:focus
+            background-color: transparent
+            color: $primary
+  &.tb-small
+    td,
+    th
+      padding: 7px 20px
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+  &.crowd-md
+    +responsive(1500px)
+      th,
+      td
+        padding: 7px 10px
+        font-size: 12px
+        .check 
+          font-size: 16px
+      th
+        padding: 15px 10px
+.more
+  cursor: pointer
+  height: 20px
+  width: 30px
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  position: relative
+  float: right
+  span
+    width: 5px
+    height: 5px
+    border-radius: 50%
+    display: block
+    margin-right: 3px
+    background-color: #b9b9b9
+.pill
+  background-color: $border
+  display: inline-block
+  vertical-align: middle
+  text-align: center
+  color: #FFF
+  font-size: 12px
+  line-height: 22px
+  min-width: 90px
+  padding: 0 10px
+  border-radius: 24px
+  &.onprogress
+    background-color: #3FC380
+  &.ontime
+    background-color: #1E8BC3
+  &.delayed
+    background-color: #EB9532
+  &.no-incenctive,
+  &.canceled 
+    background-color: #EC644B
+
+.fade.mdl-custom-right
+  .modal-dialog
+    margin: 0 !important
+    position: absolute
+    right: -570px
+    width: 570px
+    min-height: 100%
+    overflow: auto
+    transition: opacity 0.3s linear, right 0.3s ease-out !important
+    transform: translate3d(0%, 0, 0) !important
+  &.fade.in
+    .modal-dialog
+      right: 0
+    .modal-content
+      .modal-header
+        background-color: #FFF
+        border-bottom: none
+        padding: 55px 30px
+        h4
+          font-size: 28px
+          line-height: 33px
+        .close
+          position: relative
+          top: -30px
+      .modal-body
+        min-height: calc(100vh - 245px)
+      .modal-footer
+        border-top: 0
+        background-color: #FFF
+        padding: 30px
+        .form-foot
+          @extend .clearfix
+          .btn
+            line-height: 40px
+
+
+.multiplier
+  position: relative  
+  padding-bottom: 15px
+  border-bottom: 1px solid #DEE4E8
+  .item
+    position: relative
+    .row
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+  .btn-add
+    display: block
+    width: 16px
+    height: 16px
+    padding: 0
+    background-color: #919EAB
+    border-radius: 8px
+    border: 0
+    z-index: 2
+    position: absolute
+    left: calc(100% + 20px)
+    top: 40px
+    &:before
+      content: "+"
+      font-weight: bold
+      font-size: 20px
+      position: absolute
+      top: -3px
+      left: 3px
+      color: #FFF
+  .btn-del
+    display: none
+    width: 16px
+    text-align: center
+    padding: 0
+    color: #919EAB;
+    background-color: transparent
+    border: 0
+    z-index: 1
+    position: absolute
+    left: calc(100% + 20px)
+    top: 40px
+  &.multiplied
+    .btn-del
+      display: block

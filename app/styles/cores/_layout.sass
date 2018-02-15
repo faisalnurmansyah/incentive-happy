@@ -1,0 +1,50 @@
+// Margin & Padding
+$mg : 0 5 10 15 20 25 30 35 40 50 60 70 75 80 90 100 120 150 200 240 300
+=layout($prefix:'')
+  @for $i from 1 through length($mg)
+    .#{$prefix}mb#{nth($mg, $i)}
+      margin-bottom: #{nth($mg, $i)}px
+      +mobile()
+        margin-bottom: 30px
+    .#{$prefix}mt#{nth($mg, $i)}
+      margin-top: #{nth($mg, $i)}px
+      +mobile()
+        margin-top: 30px
+    .#{$prefix}mtd#{nth($mg, $i)}
+      margin-top: #{nth($mg, $i)}px
+      margin-bottom: #{nth($mg, $i)}px
+      +mobile()
+        margin-bottom: 30px
+        margin-top: 30px
+    .#{$prefix}ml#{nth($mg, $i)}
+      margin-left: #{nth($mg, $i)}px
+    .#{$prefix}mlsm#{nth($mg, $i)}
+      margin-left: #{nth($mg, $i)}px
+      @media(max-width: 768px)
+        margin: 0
+    .#{$prefix}mr#{nth($mg, $i)}
+      margin-right: #{nth($mg, $i)}px
+    .#{$prefix}pd#{nth($mg, $i)}
+      padding: #{nth($mg, $i)}px
+    .#{$prefix}ptd#{nth($mg, $i)}
+      padding-top: #{nth($mg, $i)}px
+      padding-bottom: #{nth($mg, $i)}px
+      +mobile()
+        padding-bottom: 30px
+        padding-top: 30px
+    .#{$prefix}pt#{nth($mg, $i)}
+      padding-top: #{nth($mg, $i)}px
+      +mobile()
+        padding-top: 30px
+    .#{$prefix}pb#{nth($mg, $i)}
+      padding-bottom: #{nth($mg, $i)}px
+      +mobile()
+        padding-bottom: 30px
+    .#{$prefix}plr#{nth($mg, $i)}
+      padding-left: #{nth($mg, $i)}px
+      padding-right: #{nth($mg, $i)}px
+      +mobile()
+        padding-left: 15px
+        padding-right: 15px
+
++layout()

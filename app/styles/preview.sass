@@ -1,0 +1,111 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* Preview */
+/* ------------------------------------------------------------------------------------------------ */
+$main-color: #009F61
+$bg-green: lighten(#2bcbba, 50%)
+
+* 
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Arial', sans-serif
+  background-color: #fff
+
+
+main.preview
+  padding: 30px
+  .index-card
+    background-color: $bg-green
+    margin: 0 auto
+    width: 370px
+    overflow: hidden
+    text-align: center
+    display: block
+    @media only screen and (max-width: 767px)
+      width: 100%
+    .index-card-label
+      background-color: $main-color
+      color: #fff
+      padding: 17px 0
+      text-align: center
+      font-size: 10px
+      text-transform: uppercase
+      letter-spacing: 3px
+    .index-card-header
+      padding: 20px 0
+      h2
+        margin: 0
+        font-size: 28px
+        line-height: 45px
+        font-weight: 800
+        color: $main-color
+      img
+        max-height: 100%
+    .index-card-list-wrap
+      min-height: 366px
+      border-top: 5px solid darken($main-color, 10%)
+      // overflow: auto
+      .index-card-item a
+        position: relative
+        display: block
+        text-align: left
+        line-height: 60px
+        padding: 0 15px
+        border-top: 1px solid #E2E2E2
+        text-decoration: none
+        color: #777
+        &:hover
+          background-color: $main-color
+          color: #fff
+          border-top: 1px solid darken($main-color, 10%)
+      .index-card-item
+        &.has-child
+          a:after
+            content: "\f078"
+            font-family: FontAwesome
+            font-size: 12px
+            position: absolute
+            right: 15px
+            transition: transform .3s 
+          ul
+            padding: 0
+            margin: 0
+            display: block
+            max-height: 0
+            overflow: hidden
+            transition: max-height .5s ease-out, margin .3s
+            li
+              list-style: none
+              text-align: left
+              a
+                display: block
+                padding: 0 25px
+                line-height: 50px
+                border-top: 0
+                &:after
+                  display: none
+          &.open
+            a:after
+              transform: rotate(-180deg)
+            ul
+              max-height: 900px
+              margin: 0 0 15px
+              li
+                a
+                  border-top: 0
+
+footer
+  font-size: 14px
+  padding-bottom: 30px
+  text-align: center
+  a
+    line-height: 20px
+    color: #777
+    text-decoration: none
+    img
+      width: 20px
+      height: 20px
+      margin-left: 10px
+      vertical-align: middle

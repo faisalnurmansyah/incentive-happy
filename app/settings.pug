@@ -1,0 +1,54 @@
+extends templates/layout.pug
+
+block vars
+  -var activepage = "settings"
+
+block content
+  .content-wrap
+    .content-header
+      h1 Settings
+    .content-body
+      ul.setting-list
+        li
+          h2 General Settings
+          a.btn.btn-default.btn-manage(href="#modalGeneralSettings" data-toggle="modal") Manage
+      //- .section-form
+      //-   .form-main
+      //-     .form-group
+      //-       label Title Creation
+      //-       input.form-control(type="text" name="nama_klien" required)
+      //-     .form-group
+      //-       label Title
+      //-       input.form-control(type="text" name="nama_klien" required)
+      //-   .form-foot
+      //-     .pull-right
+      //-       btn.btn.btn-default(type="button") Cancel
+      //-       a.btn.btn-green#saveButton(href="#") Save
+
+
+
+block modal
+  #modalGeneralSettings.modal.fade.mdl-custom-right(tabindex="-1" role="dialog")
+    .modal-dialog
+      .modal-content.setheight
+        .modal-header
+          img.close(src="images/icon-close.png" data-dismiss="modal" aria-label="Close")
+          h4.modal-title General Settings
+        .modal-body
+          .section-form
+            .form-main
+              .form-group
+                  label Tittle Example
+                  input.form-control(type="text" name="example_input" required)
+              .form-group
+                label Tittle Example
+                select.select(name="example_input" required)
+                  option(selected) Option 1
+                  option Option 2
+                  option Option 3
+                  option Option 4
+        .modal-footer
+          .form-foot
+            .pull-right
+              btn.btn.btn-default(type="button") Cancel
+              a.btn.btn-green#saveButton(href="#") Save

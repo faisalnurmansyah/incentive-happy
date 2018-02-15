@@ -1,0 +1,79 @@
+extends templates/layout.pug
+
+block vars
+  -var activepage = ""
+
+block header
+
+block navigation
+
+block content
+  //- Login v3
+  .account-bg
+    .account-bg-img(style="background-image: url(images/login-register.jpg)")
+  .account-wrap
+    .form-login
+      a(href="#").account-icon
+        img(src="images/harnods-logo.svg")
+      h1.logo
+        | Incentive Happy!
+      p Sign in to continue
+      form.valthis
+        .form-group
+          label Email
+          input.form-control(type="email" name="email" required)
+          .err-msg
+        .form-group
+          label Password
+          input.form-control(type="password" name="password" required)
+          .err-msg
+          .link
+            a(href="reset-password.html") Forgot password?
+        .form-action
+          button.btn.btn-green.btn-block(type="submit") Sign in
+  //- Login v2
+    .account-bg
+    .account-bg-img(style="background-image: url(images/login-register.jpg)")
+    .account-wrap
+      .form-login
+        a(href="#").account-icon
+          img(src="images/harnods-logo.svg")
+        form.valthis
+          h1.logo
+            | Incentive Happy!
+          p Sign in to continue
+          .form-group
+            label Email
+            input.form-control(type="email" name="email" required)
+            .err-msg
+          .form-group
+            label Password
+            input.form-control(type="password" name="password" required)
+            .err-msg
+            .link
+              a(href="reset-password.html") Forgot password?
+          .form-action
+            button.btn.btn-green.btn-block(type="submit") Sign in
+  //- a(href="#").account-icon
+      //-   img(src="images/harnods-logo.svg")
+      //- h1.logo
+      //-   //- img(src="images/catelsys-logo.png")
+      //-   | Incentive Happy!
+      //- //- h2 Welcome Back,
+      //- p Sign in to continue
+      //- .form-login
+      //-   form.valthis
+      //-     .form-group
+      //-       label Email
+      //-       input.form-control(type="email" name="email" required)
+      //-       .err-msg
+      //-     .form-group
+      //-       label Password
+      //-       input.form-control(type="password" name="password" required)
+      //-       .err-msg
+      //-       .link
+      //-         a(href="reset-password.html") Forgot password?
+      //-     .form-action
+      //-       button.btn.btn-green.btn-block(type="submit") Sign in
+
+block footer
